@@ -22,6 +22,7 @@ public class EmployeeTypeModel extends AbstractModel {
 	private String employeeType;
 	
 	
+	
 	public Long getId() {
 		return id;
 	}

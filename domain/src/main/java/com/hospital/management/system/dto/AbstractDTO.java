@@ -1,10 +1,17 @@
 package com.hospital.management.system.dto;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class AbstractDTO {
+	@ApiModelProperty(value="statuc",notes = "The database generated statuc",hidden = true)
 	private String status;
+	@ApiModelProperty(value="createdDate",notes = "The database generated createdDate",hidden = true)
 	private String createdDate;
+	@ApiModelProperty(value="modifiedDate",notes = "The database generated modifiedDate",hidden = true)
 	private String modifiedDate;
+	@ApiModelProperty(value="createdBy",notes = "The database generated createdBy",hidden = true)
 	private String createdbBy;
+	@ApiModelProperty(value="modifiedBy",notes = "The database generated modifiedBy",hidden = true)
 	private String modifiedBy;
 
 	public String getStatus() {

@@ -3,7 +3,13 @@ package com.hospital.management.system.model;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.EntityListeners;
+import javax.persistence.MappedSuperclass;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
 public class AbstractModel{
 	@Column(name = "status",columnDefinition = "SMALLINT")
 	private Boolean status;

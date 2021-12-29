@@ -1,7 +1,9 @@
 package com.hospital.management.system.dto;
 
+import io.swagger.annotations.ApiModelProperty;
 
 public class EmployeeTypeDTO extends AbstractDTO{
+	@ApiModelProperty(value="Id",notes = "The database generated ID",hidden = true)
 	private String id;
 	private String employeeType;
 	public String getId() {

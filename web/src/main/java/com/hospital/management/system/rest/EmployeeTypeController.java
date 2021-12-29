@@ -18,6 +18,9 @@ import com.hospital.management.system.model.EmployeeTypeModel;
 import com.hospital.management.system.services.EmployeeTypeServices;
 import com.hospital.management.system.transformer.EmployeeTypeTransformer;
 
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+
 @RestController("/employeeType/")
 public class EmployeeTypeController {
 	@Autowired
@@ -47,6 +50,9 @@ public class EmployeeTypeController {
 	        }
 	}
 	
+	@ApiImplicitParams({
+        @ApiImplicitParam(name = "id", value = "Employee Type Id ",readOnly = true, dataType = "string",paramType = "query",required = true),
+	})
 	@PostMapping("updateEmployeeType")
 	public ResponseEntity<StatusDTO> updateEmployeeType(@ModelAttribute EmployeeTypeDTO employeeTypeDTO){
 		 try{
