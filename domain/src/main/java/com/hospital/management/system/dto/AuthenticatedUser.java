@@ -6,13 +6,7 @@ public class AuthenticatedUser {
     private Integer status;
     private String token;
     private Long userId;
-    private String email;
-    private String mobileNo;
-    private String firstName;
-    private String lastName;
     private String message;
-    private String loginDate;
-    private Boolean isBlocked;
 
     
     
@@ -64,39 +58,6 @@ public class AuthenticatedUser {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getMobileNo() {
-		return mobileNo;
-	}
-
-	public void setMobileNo(String mobileNo) {
-		this.mobileNo = mobileNo;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
 	public String getMessage() {
 		return message;
 	}
@@ -104,22 +65,5 @@ public class AuthenticatedUser {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
-	public String getLoginDate() {
-		return loginDate;
-	}
-
-	public void setLoginDate(String loginDate) {
-		this.loginDate = loginDate;
-	}
-
-	public Boolean getIsBlocked() {
-		return isBlocked;
-	}
-
-	public void setIsBlocked(Boolean isBlocked) {
-		this.isBlocked = isBlocked;
-	}
-    
     
 }
