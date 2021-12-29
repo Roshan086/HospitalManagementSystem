@@ -1,5 +1,6 @@
 package com.hospital.management.system.rest;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +43,8 @@ public class EmployeeTypeController {
 		 try{
 	            EmployeeTypeModel employeeTypeModel= EmployeeTypeTransformer.getModel(employeeTypeDTO);
 	            employeeTypeModel.setStatus(true);
+	            employeeTypeModel.setCreatedDate(new Date());
+	            employeeTypeModel.setCreatedBy(1);
 	            EmployeeTypeModel employee=employeeTypeServices.saveEmployeeType(employeeTypeModel);
 	            return new ResponseEntity<>(new StatusDTO(1, "Employee Added Successfully ", EmployeeTypeTransformer.getDTO(employee)), HttpStatus.OK);
 	        } catch (Exception e) {
@@ -58,6 +61,8 @@ public class EmployeeTypeController {
 		 try{
 	            EmployeeTypeModel employeeTypeModel= EmployeeTypeTransformer.getModel(employeeTypeDTO);
 	            employeeTypeModel.setStatus(true);
+	            employeeTypeModel.setModifiedDate(new Date());
+	            employeeTypeModel.setModifiedBy(1);
 	            EmployeeTypeModel employee=employeeTypeServices.saveEmployeeType(employeeTypeModel);
 	            return new ResponseEntity<>(new StatusDTO(1, "Employee Update Successfully ", EmployeeTypeTransformer.getDTO(employee)), HttpStatus.OK);
 	        } catch (Exception e) {

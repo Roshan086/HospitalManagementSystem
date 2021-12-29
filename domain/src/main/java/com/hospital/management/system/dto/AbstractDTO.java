@@ -10,7 +10,7 @@ public class AbstractDTO {
 	@ApiModelProperty(value="modifiedDate",notes = "The database generated modifiedDate",hidden = true)
 	private String modifiedDate;
 	@ApiModelProperty(value="createdBy",notes = "The database generated createdBy",hidden = true)
-	private String createdbBy;
+	private String createdBy;
 	@ApiModelProperty(value="modifiedBy",notes = "The database generated modifiedBy",hidden = true)
 	private String modifiedBy;
 
@@ -38,12 +38,12 @@ public class AbstractDTO {
 		this.modifiedDate = modifiedDate;
 	}
 
-	public String getCreatedbBy() {
-		return createdbBy;
+	public String getCreatedBy() {
+		return createdBy;
 	}
 
-	public void setCreatedbBy(String createdbBy) {
-		this.createdbBy = createdbBy;
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
 	}
 
 	public String getModifiedBy() {
